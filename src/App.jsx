@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import Homepage from './pages/Homepage';
 
 function App() {
 
   return (
     <>
-    {/* Use the rest API to output name, title and bio*/}
-      <h1>This is my website</h1>
+      <Homepage />
     </>
   )
+
 }
 
-export default App
+export default App;
