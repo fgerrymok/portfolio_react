@@ -7,7 +7,7 @@ function App() {
     <>
       <Homepage />
     </>
-  )
+  ) 
 
 }
 
