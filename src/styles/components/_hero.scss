@@ -1,3 +1,25 @@
 body {
     background-color: $primary-color;
+    color: $primary-font-color;
+    margin: 1rem;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.socials-box {
+    width: 11rem;
+    height: 3rem;
+    border: 2px solid $primary-font-color;
+    border-radius: 1rem;
+    order: 2;
+    
+}
+
+.dev-info {
+    
 }

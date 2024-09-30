@@ -39,23 +39,27 @@ function Homepage() {
 
     return (
         <>
-            <h1>This is the homepage.</h1>
+        <section className="hero-section">
+            <section className="socials-box"></section>
             {homepageLoaded ? 
-                <section>
-                    <h2>{homepageData.acf.name}</h2>
-                    <h3>{homepageData.acf.title}</h3>
+                <section className="dev-info">
+                    <h1>{homepageData.acf.name}</h1>
+                    <h2>{homepageData.acf.title}</h2>
                     <p>{homepageData.acf.short_biography}</p>
                 </section>
             : 
                 <h2>Loading...</h2>
             }
+        </section>
+
+        <section className="homepage-works">
             <h2>Works</h2>
             {worksLoaded ? 
                 worksData.map(work => (
-                    <section key={work.id}>
+                    <section key={work.id} className="works-card">
                         <h3>{work.acf.works_title}</h3>
                         <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
-                        <ul>
+                        <ul className="homepage-toolkit">
                             {work.acf.main_toolkit.map((tool, index) => (
                                 <li key={`${tool}-${index}`}>{tool}</li>
                             ))}
@@ -66,6 +70,7 @@ function Homepage() {
             : 
                 <h2>Loading...</h2>
             }
+        </section>
         </>
     )
 }
