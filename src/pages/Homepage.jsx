@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../App.css";
+// import "../styles/main.scss";
 import { restBase } from "../utilities/Utilities";
 
 function Homepage() {
