@@ -54,7 +54,7 @@ function Homepage() {
         </section>
 
         <section className="homepage-works">
-            <h2>Works</h2>
+            <h2 id="works">Works</h2>
             {worksLoaded ? 
                 worksData.map(work => (
                     <Link to={work.slug} key={work.id} className="works-link">
