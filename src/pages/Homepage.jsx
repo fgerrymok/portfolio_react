@@ -40,40 +40,42 @@ function Homepage() {
 
     return (
         <>
-        <section className="hero-section">
-            <section className="socials-box"></section>
-            {homepageLoaded ? 
-                <section className="dev-info">
-                    <h1>{homepageData.acf.name}</h1>
-                    <h2>{homepageData.acf.title}</h2>
-                    <p>{homepageData.acf.short_biography}</p>
-                </section>
-            : 
-                <h2>Loading...</h2>
-            }
-        </section>
+        <div className="main">
+            <section className="hero-section">
+                <section className="socials-box"></section>
+                {homepageLoaded ? 
+                    <section className="dev-info">
+                        <h1>{homepageData.acf.name}</h1>
+                        <h2>{homepageData.acf.title}</h2>
+                        <p>{homepageData.acf.short_biography}</p>
+                    </section>
+                : 
+                    <h2>Loading...</h2>
+                }
+            </section>
 
-        <section className="homepage-works">
-            <h2 id="works">Works</h2>
-            {worksLoaded ? 
-                worksData.map(work => (
-                    <Link to={work.slug} key={work.id} className="works-link">
-                        <section className="works-card">
-                            <h3>{work.acf.works_title}</h3>
-                            <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
-                            <ul className="homepage-toolkit">
-                                {work.acf.main_toolkit.map((tool, index) => (
-                                    <li key={`${tool}-${index}`}>{tool}</li>
-                                ))}
-                            </ul>
-                            <p>{work.acf.works_short_description}</p>
-                        </section>
-                    </Link>
-                ))
-            : 
-                <h2>Loading...</h2>
-            }
-        </section>
+            <section className="homepage-works">
+                <h2 id="works">Works</h2>
+                {worksLoaded ? 
+                    worksData.map(work => (
+                        <Link to={work.slug} key={work.id} className="works-link">
+                            <section className="works-card">
+                                <h3>{work.acf.works_title}</h3>
+                                <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
+                                <ul className="homepage-toolkit">
+                                    {work.acf.main_toolkit.map((tool, index) => (
+                                        <li key={`${tool}-${index}`}>{tool}</li>
+                                    ))}
+                                </ul>
+                                <p>{work.acf.works_short_description}</p>
+                            </section>
+                        </Link>
+                    ))
+                : 
+                    <h2>Loading...</h2>
+                }
+            </section>
+        </div>
         </>
     )
 }
