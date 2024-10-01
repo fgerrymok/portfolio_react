@@ -8,7 +8,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1rem 0rem;
+    margin: 1rem auto;
+    max-width: 35rem;
 }
 
 .socials-box {
@@ -17,9 +18,22 @@ body {
     border: 2px solid $primary-font-color;
     border-radius: 1rem;
     order: 2;
-    
 }
 
-.dev-info {
-    
+@media(min-width: 26.25em) {
+    .hero-section {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .socials-box {
+        order: 0;
+        min-width: 3rem;
+        width: 3rem;
+        height: 11rem;
+    }
+
+    .dev-info {
+        margin-left: 1rem;
+    }
 }

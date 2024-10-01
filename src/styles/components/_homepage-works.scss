@@ -19,3 +19,19 @@
     padding: 0.5rem;
     margin: 0.2rem 0.4rem;
 }
+
+@media(min-width: 50rem) {
+    .homepage-works {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .homepage-works h2 {
+        width: 100%;
+    }
+
+    .works-link {
+        width: 45%;
+    }
+}

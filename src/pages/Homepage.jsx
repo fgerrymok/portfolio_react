@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import "../styles/main.scss";
 import { restBase } from "../utilities/Utilities";
+import { Link } from "react-router-dom";
 
 function Homepage() {
     const homepagePath = restBase + "pages/9";
@@ -56,16 +57,18 @@ function Homepage() {
             <h2>Works</h2>
             {worksLoaded ? 
                 worksData.map(work => (
-                    <section key={work.id} className="works-card">
-                        <h3>{work.acf.works_title}</h3>
-                        <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
-                        <ul className="homepage-toolkit">
-                            {work.acf.main_toolkit.map((tool, index) => (
-                                <li key={`${tool}-${index}`}>{tool}</li>
-                            ))}
-                        </ul>
-                        <p>{work.acf.works_short_description}</p>
-                    </section>
+                    <Link to={work.slug} key={work.id} className="works-link">
+                        <section className="works-card">
+                            <h3>{work.acf.works_title}</h3>
+                            <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
+                            <ul className="homepage-toolkit">
+                                {work.acf.main_toolkit.map((tool, index) => (
+                                    <li key={`${tool}-${index}`}>{tool}</li>
+                                ))}
+                            </ul>
+                            <p>{work.acf.works_short_description}</p>
+                        </section>
+                    </Link>
                 ))
             : 
                 <h2>Loading...</h2>
