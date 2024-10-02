@@ -31,13 +31,12 @@ function Homepage() {
             if ( response.ok ) {
                 const data = await response.json();
                 setWorksData(data);
-                console.log(data)
                 setWorksLoaded(true);
             }
         }
         fetchWorksPosts();
     }, [worksPath])
-
+    console.log(homepageData)
     return (
         <>
         <div className="main">
@@ -74,6 +73,30 @@ function Homepage() {
                 : 
                     <h2>Loading...</h2>
                 }
+            </section>
+
+            {homepageLoaded ? 
+                <>
+                    <section id="skills" className="homepage-skills">
+                    <h2>{homepageData.acf.skills_title}</h2>
+                    <ul className="homepage-toolkit">
+                        {homepageData.acf.toolkit.map((tool, index) => (
+                            <li key={`${tool}-${index}`}>{tool}</li>
+                        ))}
+                    </ul>
+                    </section>
+
+                    <section id="about" className="homepage-about">
+                        <h2>{homepageData.acf.about_me_title}</h2>
+                        <p>{homepageData.acf.biography}</p>
+                    </section>
+                </>
+            :
+                <p>Not loaded...</p>
+            }
+
+            <section id="skills" className="homepage-skills">
+
             </section>
         </div>
         </>
