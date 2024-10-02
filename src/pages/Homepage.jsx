@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-// import "../styles/main.scss";
 import { restBase } from "../utilities/Utilities";
-import { Link } from "react-router-dom";
+import WorkCards from "../components/WorkCards";
 
 function Homepage() {
     const homepagePath = restBase + "pages/9";
-    const worksPath = restBase + "fm-works?acf_format=standard";
     const [homepageData, setHomepageData] = useState({});
-    const [worksData, setWorksData] = useState({});
     const [homepageLoaded, setHomepageLoaded] = useState(false);
-    const [worksLoaded, setWorksLoaded] = useState(false);
 
-    // Fetch JSON data for Homepage
     useEffect(() => {
         async function fetchHomepageData() {
             const response = await fetch(homepagePath);
@@ -24,19 +19,6 @@ function Homepage() {
         fetchHomepageData();
     }, [homepagePath])
 
-    // fetch JSON data for Works
-    useEffect(() => {
-        async function fetchWorksPosts() {
-            const response = await fetch(worksPath);
-            if ( response.ok ) {
-                const data = await response.json();
-                setWorksData(data);
-                setWorksLoaded(true);
-            }
-        }
-        fetchWorksPosts();
-    }, [worksPath])
-    console.log(homepageData)
     return (
         <>
         <div className="main">
@@ -52,28 +34,8 @@ function Homepage() {
                     <h2>Loading...</h2>
                 }
             </section>
-
-            <section className="homepage-works">
-                <h2 id="works">Works</h2>
-                {worksLoaded ? 
-                    worksData.map(work => (
-                        <Link to={work.slug} key={work.id} className="works-link">
-                            <section className="works-card">
-                                <h3>{work.acf.works_title}</h3>
-                                <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
-                                <ul className="homepage-toolkit">
-                                    {work.acf.main_toolkit.map((tool, index) => (
-                                        <li key={`${tool}-${index}`}>{tool}</li>
-                                    ))}
-                                </ul>
-                                <p>{work.acf.works_short_description}</p>
-                            </section>
-                        </Link>
-                    ))
-                : 
-                    <h2>Loading...</h2>
-                }
-            </section>
+            
+            <WorkCards />
 
             {homepageLoaded ? 
                 <>
@@ -92,12 +54,8 @@ function Homepage() {
                     </section>
                 </>
             :
-                <p>Not loaded...</p>
+                <h2>Loading...</h2>
             }
-
-            <section id="skills" className="homepage-skills">
-
-            </section>
         </div>
         </>
     )
