@@ -26,26 +26,28 @@ function WorkCards() {
 
     return(
         <section className="homepage-works">
-        <h2 id="works">Works</h2>
-        {worksLoaded ? 
-            worksData.map(work => (
-                <Link to={work.slug} key={work.id} className="works-link">
-                    <section className="works-card">
-                        <h3>{work.acf.works_title}</h3>
-                        <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
-                        <ul className="homepage-toolkit">
-                            {work.acf.main_toolkit.map((tool, index) => (
-                                <li key={`${tool}-${index}`}>{tool}</li>
-                            ))}
-                        </ul>
-                        <p>{getExcerpt(work.acf.works_short_description, 25)}</p>
-                    </section>
-                </Link>
-            ))
-        : 
-            <h2>Loading...</h2>
-        }
-    </section>
+            <h2 id="works" className="works-title">Works</h2>
+            {worksLoaded ? 
+                worksData.map(work => (
+                    <div className="work-card">
+                        <Link to={work.slug} key={work.id} className="works-link">
+                            <section className="works-card">
+                                <h3>{work.acf.works_title}</h3>
+                                <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
+                                <ul className="homepage-toolkit">
+                                    {work.acf.main_toolkit.map((tool, index) => (
+                                        <li key={`${tool}-${index}`}>{tool}</li>
+                                    ))}
+                                </ul>
+                                <p>{getExcerpt(work.acf.works_short_description, 25)}</p>
+                            </section>
+                        </Link>
+                    </div>
+                ))
+            : 
+                <h2>Loading...</h2>
+            }
+        </section>
     )
 }
 
