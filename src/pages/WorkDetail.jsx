@@ -83,9 +83,9 @@ function WorkDetail() {
         )
     } else {
         return (
-            <>
+            <div className="work-detail-main">
                 <h1>Deploying Project! Please check back later.</h1>
-            </>
+            </div>
         )
     }
 }
