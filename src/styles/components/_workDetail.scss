@@ -1,3 +1,8 @@
+.work-detail-main {
+    margin: 1rem;
+    max-width: 80rem;
+}
+
 .demo-video {
     width: 100%;
 }
@@ -28,5 +33,11 @@
 
     .right-section {
         width: 50%;
+    }
+}
+
+@media(min-width: 80em) {
+    .work-detail-main {
+        margin: 1rem auto;
     }
 }

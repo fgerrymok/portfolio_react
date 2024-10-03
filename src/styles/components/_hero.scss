@@ -1,10 +1,13 @@
 body {
     background-color: $primary-color;
     color: $primary-font-color;
+    margin: 0;
+    padding: 0;
 }
 
 .main {
     margin: 1rem;
+    max-width: 80rem;
 }
 
 .hero-section {
@@ -38,5 +41,11 @@ body {
 
     .dev-info {
         margin-left: 1rem;
+    }
+}
+
+@media(min-width: 80em) {
+    .main {
+        margin: 1rem auto;
     }
 }
