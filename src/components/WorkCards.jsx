@@ -18,7 +18,7 @@ function WorkCards() {
         }
         fetchWorksPosts();
     }, [worksPath])
-
+    console.log(worksData)
     return(
         <section className="homepage-works">
         <h2 id="works">Works</h2>

@@ -1,0 +1,19 @@
+.demo-video {
+    width: 100%;
+}
+
+
+@media(min-width: 37.5em) {
+    .work-detail-main {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .left-section {
+        width: 45%;
+    }
+
+    .right-section {
+        width: 45%;
+    }
+}
