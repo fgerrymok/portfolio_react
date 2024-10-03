@@ -20,7 +20,7 @@
     margin: 0.2rem 0.4rem;
 }
 
-@media(min-width: 50rem) {
+@media(min-width: 50em) {
     .homepage-works {
         display: flex;
         flex-wrap: wrap;
@@ -33,5 +33,15 @@
 
     .works-link {
         width: 45%;
+    }
+
+    .works-card {
+        height: 29rem;
+    }
+}
+
+@media(min-width: 71.875em) {
+    .works-card {
+        height: 32rem;
     }
 }

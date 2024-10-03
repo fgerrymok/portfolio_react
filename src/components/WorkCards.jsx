@@ -18,7 +18,12 @@ function WorkCards() {
         }
         fetchWorksPosts();
     }, [worksPath])
-    console.log(worksData)
+    
+    function getExcerpt(text, wordLimit) {
+        const words = text.split(/\s+/);
+        return words.slice(0, wordLimit).join(' ') + (words.length > wordLimit ? '...' : '');
+    }
+
     return(
         <section className="homepage-works">
         <h2 id="works">Works</h2>
@@ -33,7 +38,7 @@ function WorkCards() {
                                 <li key={`${tool}-${index}`}>{tool}</li>
                             ))}
                         </ul>
-                        <p>{work.acf.works_short_description}</p>
+                        <p>{getExcerpt(work.acf.works_short_description, 25)}</p>
                     </section>
                 </Link>
             ))
