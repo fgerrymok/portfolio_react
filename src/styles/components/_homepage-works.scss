@@ -1,0 +1,46 @@
+.works-title {
+    background-color: $home-card-background-color;
+    border: 5px solid $home-card-border-color;
+    margin: 0;
+    padding: 1rem;
+}
+
+.work-card {
+    background-color: $home-card-background-color;
+    border: 5px solid $home-card-border-color;
+    border-top: none;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@media(min-width: 50em) {
+    .homepage-works {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .work-card {
+        margin: 0;
+        border: 5px solid $home-card-border-color;
+    }
+
+    .works-title {
+        grid-column: span 2;
+    }
+
+    .work-card:nth-child(2) {
+        grid-column: span 3;
+        grid-row: span 3;
+    }
+
+    .work-card:nth-child(3), .work-card:nth-child(5) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .work-card:nth-child(4) {
+        grid-column: span 3;
+        grid-row: span 2;
+    }  
+}

@@ -1,0 +1,15 @@
+header {
+    background-color: $main-card-color;
+    padding: 1rem;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+header ul li {
+    padding: 1rem;
+    font-size: 1.3rem;
+}

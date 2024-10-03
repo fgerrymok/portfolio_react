@@ -1,14 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import "./styles/main.scss";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Homepage from './pages/Homepage';
+import WorkDetail from './pages/WorkDetail';
 
 function App() {
 
   return (
-    <>
-    {/* Use the rest API to output name, title and bio*/}
-      <h1>This is my website</h1>
-    </>
-  )
+    <BrowserRouter>
+    <ScrollToTop />
+    <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/:work" element={<WorkDetail />} />
+      </Routes>
+    <Footer />
+    </BrowserRouter>
+  ) 
+
 }
 
-export default App
+export default App;

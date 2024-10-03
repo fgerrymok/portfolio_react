@@ -1,0 +1,51 @@
+body {
+    background-color: $primary-color;
+    color: $primary-font-color;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 1rem;
+    max-width: 80rem;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 35rem;
+}
+
+.socials-box {
+    width: 11rem;
+    height: 3rem;
+    border: 2px solid $primary-font-color;
+    border-radius: 1rem;
+    order: 2;
+}
+
+@media(min-width: 26.25em) {
+    .hero-section {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .socials-box {
+        order: 0;
+        min-width: 3rem;
+        width: 3rem;
+        height: 11rem;
+    }
+
+    .dev-info {
+        margin-left: 1rem;
+    }
+}
+
+@media(min-width: 82em) {
+    .main {
+        margin: 1rem auto;
+    }
+}
