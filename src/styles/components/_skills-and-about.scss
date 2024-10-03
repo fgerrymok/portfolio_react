@@ -1,0 +1,36 @@
+.homepage-skills, .homepage-about  {
+    background-color: $home-card-background-color;
+    border: 5px solid $home-card-border-color;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.homepage-toolkit {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homepage-toolkit li {
+    border: 1px solid $primary-font-color;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0.4rem;
+}
+
+@media(min-width: 50em) {
+    .skills-and-about {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .homepage-skills {
+        grid-column: span 2;
+    }
+
+    .homepage-about {
+        grid-column: span 3;
+    }
+}

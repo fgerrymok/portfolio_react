@@ -1,30 +1,16 @@
 .works-title {
-    background-color: #4B5458;
-    border: 5px solid #4D585C;
+    background-color: $home-card-background-color;
+    border: 5px solid $home-card-border-color;
     margin: 0;
     padding: 1rem;
 }
 
 .work-card {
-    background-color: #4B5458;
-    border: 5px solid #4D585C;
+    background-color: $home-card-background-color;
+    border: 5px solid $home-card-border-color;
     border-top: none;
     padding: 1rem;
     margin-top: 1rem;
-}
-
-.homepage-toolkit {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.homepage-toolkit li {
-    border: 1px solid $primary-font-color;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin: 0.2rem 0.4rem;
 }
 
 @media(min-width: 50em) {
@@ -36,7 +22,7 @@
 
     .work-card {
         margin: 0;
-        border: 5px solid #4D585C;
+        border: 5px solid $home-card-border-color;
     }
 
     .works-title {
@@ -56,6 +42,5 @@
     .work-card:nth-child(4) {
         grid-column: span 3;
         grid-row: span 2;
-    }
-        
+    }  
 }

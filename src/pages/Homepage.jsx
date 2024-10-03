@@ -38,21 +38,21 @@ function Homepage() {
             <WorkCards />
 
             {homepageLoaded ? 
-                <>
+                <div className="skills-and-about">
                     <section id="skills" className="homepage-skills">
-                    <h2>{homepageData.acf.skills_title}</h2>
-                    <ul className="homepage-toolkit">
-                        {homepageData.acf.toolkit.map((tool, index) => (
-                            <li key={`${tool}-${index}`}>{tool}</li>
-                        ))}
-                    </ul>
+                        <h2>{homepageData.acf.skills_title}</h2>
+                        <ul className="homepage-toolkit">
+                            {homepageData.acf.toolkit.map((tool, index) => (
+                                <li key={`${tool}-${index}`}>{tool}</li>
+                            ))}
+                        </ul>
                     </section>
 
                     <section id="about" className="homepage-about">
                         <h2>{homepageData.acf.about_me_title}</h2>
                         <p>{homepageData.acf.biography}</p>
                     </section>
-                </>
+                </div>
             :
                 <h2>Loading...</h2>
             }
