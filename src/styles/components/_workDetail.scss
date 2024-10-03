@@ -2,6 +2,19 @@
     width: 100%;
 }
 
+.work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-toolkit, .work-detail-links {
+    background-color: $light-card-color;
+    color: black;
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border: 5px solid $main-card-color;
+    border-radius: 1rem;
+}
+
+.link-icon {
+    margin: 1rem;
+}
+
 
 @media(min-width: 37.5em) {
     .work-detail-main {
@@ -10,10 +23,10 @@
     }
     
     .left-section {
-        width: 45%;
+        width: 50%;
     }
 
     .right-section {
-        width: 45%;
+        width: 50%;
     }
 }
