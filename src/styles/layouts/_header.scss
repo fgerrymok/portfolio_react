@@ -1,15 +1,56 @@
 header {
     background-color: $main-card-color;
     padding: 1rem;
+    height: 4rem;
+    position: relative;
 }
 
-header ul {
+.menu-button {
+    width: 4rem;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    z-index: 10000;
+}
+
+
+.menu-button-fixed {
+    position: fixed;
+    width: 4rem;
+    background-color: transparent;
+    border: none;
+    right: 1rem;
+    top: 1.4rem;
+    z-index: 10000;
+}
+
+.menu-button svg path, .menu-button-fixed svg path {
+    fill: white;
+}
+
+.hide-menu {
+    display: none;
+}
+
+.show-menu ul {
     list-style-type: none;
-    display: flex;
     padding: 0;
+    margin: 0;
+    background-color: $main-card-color;
+    width: 33%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-header ul li {
+.show-menu ul li {
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
