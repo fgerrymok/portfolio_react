@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { restBase } from "../utilities/Utilities";
 
 function WorkCards() {
-    const worksPath = restBase + "fm-works?acf_format=standard";
+    const worksPath = restBase + "fm-works?acf_format=standard&orderby=date&order=asc";
     const [worksData, setWorksData] = useState({});
     const [worksLoaded, setWorksLoaded] = useState(false);
 
@@ -29,8 +29,8 @@ function WorkCards() {
             <h2 id="works" className="works-title">Works</h2>
             {worksLoaded ? 
                 worksData.map(work => (
-                    <div className="work-card">
-                        <Link to={work.slug} key={work.id} className="works-link">
+                    <div key={work.id} className="work-card">
+                        <Link to={work.slug} className="works-link">
                             <section className="works-card">
                                 <h3>{work.acf.works_title}</h3>
                                 <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />

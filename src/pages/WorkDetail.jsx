@@ -24,7 +24,7 @@ function WorkDetail() {
     }, [restPath])
     
     // Adding this temporarily so that only the movie page loads
-    if ( workData.id === 35 ) {
+    if ( workData.id === 35 || workData.id === 38 ) {
 
         return(
             <>
@@ -38,9 +38,8 @@ function WorkDetail() {
                             <p>{workData.acf.works_short_description}</p>
                         </div>
     
-                        {/* Change the highlights title to ACF later */}
                         <div className="work-detail-highlights">
-                            <h2>Highlights</h2>
+                            <h2>{workData.acf.highlights_title}</h2>
                             {workData.acf.highlights.map((highlight) => (
                                 <article key={highlight.highlight_title} className="single-highlight">
                                     <h3>{highlight.highlight_title}</h3>
@@ -53,9 +52,8 @@ function WorkDetail() {
                         </div>
                     </section>
                     <section className="right-section">
-                        {/* Change the gallery title to ACF later */}
                         <div className="work-detail-gallery">
-                            <h2>Gallery</h2>
+                            <h2>{workData.acf.gallery}</h2>
                             <img src={workData.acf.works_image} alt={workData.acf.works_title} className="works-card-image"></img>
                         </div>
                         {/* Change the toolkit title to ACF later */}
