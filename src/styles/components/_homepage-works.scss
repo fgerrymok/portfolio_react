@@ -1,13 +1,13 @@
 .works-title {
-    background-color: $home-card-background-color;
-    border: 5px solid $home-card-border-color;
+    background-color: $dark;
+    border: 5px solid $dark-border;
     margin: 0;
     padding: 1rem;
 }
 
 .work-card {
-    background-color: $home-card-background-color;
-    border: 5px solid $home-card-border-color;
+    background-color: $dark;
+    border: 5px solid $dark-border;
     border-top: none;
     padding: 1rem;
     margin-top: 1rem;
@@ -22,7 +22,7 @@
 
     .work-card {
         margin: 0;
-        border: 5px solid $home-card-border-color;
+        border: 5px solid $dark-border;
     }
 
     .works-title {

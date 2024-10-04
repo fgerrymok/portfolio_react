@@ -24,7 +24,7 @@ function WorkDetail() {
     }, [restPath])
     
     // Adding this temporarily so that only the movie page loads
-    if ( workData.id === 35 || workData.id === 38 ) {
+    if ( workData.id === 35 || workData.id === 38 || workData.id === 40 ) {
 
         return(
             <>
