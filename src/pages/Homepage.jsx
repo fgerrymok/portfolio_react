@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
-import { restBase } from "../utilities/Utilities";
+import { useEffect, useState, useContext } from "react";
+import { restBase, toggleNav } from "../utilities/Utilities";
 import WorkCards from "../components/WorkCards";
 import { Link } from "react-router-dom";
+import { Context } from "../App";
 
 function Homepage() {
     const homepagePath = restBase + "pages/9";
     const [homepageData, setHomepageData] = useState({});
     const [homepageLoaded, setHomepageLoaded] = useState(false);
+    const [menuActive, setMenuActive] = useContext(Context);
 
     useEffect(() => {
         async function fetchHomepageData() {
@@ -22,7 +24,7 @@ function Homepage() {
 
     return (
         <>
-        <div className="main">
+        <div className="main" onClick={() => {menuActive ? toggleNav(menuActive, setMenuActive) : null}}>
             <section className="hero-section">
                 <section className="socials-box">
 

@@ -1,13 +1,16 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from 'react';
-import { restBase } from "../utilities/Utilities";
+import { useState, useEffect, useContext } from 'react';
+import { restBase, toggleNav } from "../utilities/Utilities";
 import { Link } from "react-router-dom";
+import { Context } from "../App";
+
 function WorkDetail() {
     // grab the param and use it to make an API call
     const { work } = useParams();
     const restPath = restBase + `fm-works?acf_format=standard&slug=${work}`;
     const [workData, setWorkData] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
+    const [menuActive, setMenuActive] = useContext(Context);
 
     useEffect(() => {
         async function getWorkDetails() {
@@ -29,7 +32,7 @@ function WorkDetail() {
         return(
             <>
                 {isLoaded ?
-                <div className="work-detail-main">
+                <div className="work-detail-main" onClick={() => {menuActive ? toggleNav(menuActive, setMenuActive) : null}}>
                     
                     <section className="left-section">
                         <h1>{workData.acf.works_title}</h1>
