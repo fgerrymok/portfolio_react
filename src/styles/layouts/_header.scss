@@ -48,12 +48,23 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .show-menu ul li {
-    padding: 1rem;
     font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.show-menu ul li a {
+    padding: 1rem;
+    display: block;
+    width: 100%; 
+}
+
+.show-menu ul li a:hover {
+    background-color: white;
+    color: $dark;
 }
 
 @media(min-width: 37.5em) {
