@@ -23,6 +23,11 @@
     border-radius: 1rem;
 }
 
+.work-detail-links {
+    width: fit-content;
+    padding: 0.5rem;
+}
+
 .work-detail-links svg {
     margin: .75rem;
     width: 2.2rem;
@@ -34,7 +39,7 @@
     .work-detail-main {
         display: flex;
         justify-content: space-around;
-        margin-top: 5.5rem;
+        margin-top: 8rem;
     }
     
     .left-section {
@@ -44,7 +49,7 @@
     .right-section {
         width: 47.5%;
         position: fixed;
-        z-index: -1;
+        z-index: 1;
         right: 1rem;
         top: 6rem;
     }
@@ -67,7 +72,7 @@
 @media(min-width: 82em) {
     .work-detail-main {
         margin: 1rem auto;
-        margin-top: 5.5rem;
+        margin-top: 8rem;
     }
 
     .right-section, .invisible-right-container {
