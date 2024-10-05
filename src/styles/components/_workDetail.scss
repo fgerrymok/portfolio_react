@@ -18,13 +18,15 @@
     background-color: $light-card-color;
     color: black;
     margin: 1rem 0.5rem;
-    padding: 1rem;
+    padding: 0.75rem;
     border: 5px solid $main-card-color;
     border-radius: 1rem;
 }
 
-.link-icon {
-    margin: 1rem;
+.work-detail-links svg {
+    margin: .75rem;
+    width: 2.2rem;
+    height: auto;
 }
 
 
@@ -32,6 +34,7 @@
     .work-detail-main {
         display: flex;
         justify-content: space-around;
+        margin-top: 5.5rem;
     }
     
     .left-section {
@@ -39,12 +42,36 @@
     }
 
     .right-section {
-        width: 50%;
+        width: 47.5%;
+        position: fixed;
+        z-index: -1;
+        right: 1rem;
+        top: 6rem;
+    }
+
+    .invisible-right-container {
+        width: 47.5%;
     }
 }
 
-@media(min-width: 80em) {
+@media(min-width: 65.625rem) {
+    .left-section {
+        width: 60%;
+    }
+
+    .right-section, .invisible-right-container {
+        width: 37.5%;
+    }
+}
+
+@media(min-width: 82em) {
     .work-detail-main {
         margin: 1rem auto;
+        margin-top: 5.5rem;
+    }
+
+    .right-section, .invisible-right-container {
+        width: 30.5rem;
+        right: calc((100vw - 80rem) / 2);
     }
 }

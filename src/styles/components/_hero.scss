@@ -58,8 +58,15 @@ body {
     }
 }
 
+@media(min-width: 37.5em) {
+    .main {
+        margin-top: 6.6rem;
+    }
+}
+
 @media(min-width: 82em) {
     .main {
         margin: 1rem auto;
+        margin-top: 6.6rem;
     }
 }

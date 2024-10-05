@@ -42,6 +42,7 @@ header {
     width: 33%;
     height: 100%;
     position: fixed;
+    z-index: 9999;
     right: 0;
     top: 0;
     display: flex;
@@ -53,4 +54,13 @@ header {
 .show-menu ul li {
     padding: 1rem;
     font-size: 2rem;
+}
+
+@media(min-width: 37.5em) {
+    header {
+        position: fixed;
+        top: 0rem;
+        right: 0;
+        left: 0;
+    }
 }
