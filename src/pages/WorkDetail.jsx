@@ -87,7 +87,16 @@ function WorkDetail() {
                     </div>
                 :
                     <div className="work-detail-main">
-                        <p className="under-construction">Project Under Construction.</p>
+                        <div className="under-construction">
+                            <svg className="under-construction-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.503384" d="M218 114C207.781 109.763 154.466 96.9807 154.003 84.1942C153.821 79.1711 163.082 56.6235 198.713 64.7485C220.618 69.7438 218.862 91.1757 216.415 100.38C215.24 104.802 209.03 107.489 206.47 111.291" stroke="#000000" strokeOpacity="0.9" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M201 117.298C184.868 158.187 136.401 145.476 150.559 100" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M148 160C142.818 180.198 139.446 255.845 132.989 271.659C125.3 290.488 106.806 314.605 94 330.289L104.368 338" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M192 337.972C190.266 338.205 176.583 336.923 175.993 336.548C175.402 336.172 175.993 256.168 159 223.477L169.475 163" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M146 159.005C102.339 158.613 92.0143 182.286 137.795 202" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M172 165C186.105 183.05 196.892 207.331 211 224" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M96 203C150.657 211.5 190.692 213.45 245 220" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M258.602 205.264C258.59 210.596 247.596 234.326 252.071 238.962C267.089 254.519 327.744 243.246 297.814 215.374C289.444 207.58 275.964 204.476 261.737 203" stroke="#000000" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+                            <p className="under-construction-text">Project Under Construction.</p>
+                            <div className="return-to-home">
+                                <Link to="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.427 3.021h-7.427v-3.021l-6 5.39 6 5.61v-3h7.427c3.071 0 5.561 2.356 5.561 5.427 0 3.071-2.489 5.573-5.561 5.573h-7.427v5h7.427c5.84 0 10.573-4.734 10.573-10.573s-4.733-10.406-10.573-10.406z"/></svg>
+                                    <p>Return to Home</p>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
             )
             :
