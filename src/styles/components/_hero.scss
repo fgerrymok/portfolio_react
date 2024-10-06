@@ -8,6 +8,15 @@ body {
 .main {
     margin: 1rem;
     max-width: 80rem;
+    transform: translateX(0%);
+    transition: transform 0.5s ease;
+}
+
+.main-pushed-left {
+    margin: 1rem;
+    max-width: 80rem;
+    transform: translateX(-71%);
+    transition: transform 0.5s ease;
 }
 
 .hero-section {
@@ -61,6 +70,14 @@ body {
 @media(min-width: 37.5em) {
     .main {
         margin-top: 6.6rem;
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+
+    .main-pushed-left {
+        margin-top: 6.6rem;
+        transform: translateX(-40%);
+        transition: transform 0.5s ease;
     }
 }
 
@@ -68,5 +85,14 @@ body {
     .main {
         margin: 1rem auto;
         margin-top: 6.6rem;
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+
+    .main-pushed-left {
+        margin: 1rem auto;
+        margin-top: 6.6rem;
+        transform: translateX(-40%);
+        transition: transform 0.5s ease;
     }
 }

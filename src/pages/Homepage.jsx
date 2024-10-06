@@ -24,7 +24,7 @@ function Homepage() {
 
     return (
         <>
-        <div className="main" onClick={() => {menuActive ? toggleNav(menuActive, setMenuActive) : null}}>
+        <div className={menuActive ? "main-pushed-left" : "main"} onClick={() => {menuActive ? toggleNav(menuActive, setMenuActive) : null}}>
             <section className="hero-section">
                 <section className="socials-box">
 
