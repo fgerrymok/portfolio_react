@@ -50,8 +50,12 @@ body {
     height: auto;
 }
 
-.socials-box svg path {
+.socials-box svg {
     fill: white;
+}
+
+.socials-box svg:hover, .socials-box svg:active {
+    fill: $accent-color-border;
 }
 
 .wavy-text {

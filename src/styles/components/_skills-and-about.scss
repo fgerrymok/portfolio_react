@@ -19,6 +19,10 @@
     margin: 0.2rem 0.4rem;
 }
 
+.homepage-toolkit li:hover {
+    border-color: $accent-color-border;
+}
+
 @media(min-width: 50em) {
     .skills-and-about {
         display: grid;

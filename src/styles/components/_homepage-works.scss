@@ -14,8 +14,8 @@
 }
 
 .work-card:hover {
-    background-color: #A1B2B2;
-    border: 5px solid #8C9B9B;
+    background-color: $accent-color;
+    border: 5px solid $accent-color-border;
 }
 
 @media(min-width: 50em) {
