@@ -41,7 +41,13 @@ function Homepage() {
                 {homepageLoaded ? 
                     <section className="dev-info">
                         <h1>{homepageData.acf.name}</h1>
-                        <h2>{homepageData.acf.title}</h2>
+                        <h2 className="wavy-text">
+                            {homepageData.acf.title.split('').map((letter, index) => {
+                                let num = index;
+                                num ++;
+                                return <span style={{ '--i': num }} key={index}>{letter}</span>;
+                            })}
+                        </h2>
                         <p>{homepageData.acf.short_biography}</p>
                     </section>
                 : 
