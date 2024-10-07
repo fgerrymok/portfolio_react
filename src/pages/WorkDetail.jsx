@@ -100,7 +100,9 @@ function WorkDetail() {
                     </div>
             )
             :
-                <h1>Loading...</h1>
+                <div className="work-detail-main">
+                    <h1>Loading...</h1>
+                </div>
             }
         </>
     )
