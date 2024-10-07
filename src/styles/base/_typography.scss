@@ -1,13 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 h1 {
     font-size: 2.7rem;
     line-height: 1.1;
+    font-family: "Roboto Slab", sans-serif;
 }
 
-// h2 {
-//     font-size: 1.5rem;
-// }
+h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", sans-serif;
+}
 
 a {
     color: $primary-font-color;
     text-decoration: none;
-  }
+}
+
+.code-design {
+    color: #32CD32;
+    padding: 0 0.3rem;
+}

@@ -26,7 +26,7 @@ function WorkCards() {
 
     return(
         <section className="homepage-works">
-            <h2 id="works" className="works-title">Works</h2>
+            <h2 id="works" className="works-title"><span className="code-design">/</span> Works</h2>
             {worksLoaded ? 
                 worksData.map(work => (
                     <div key={work.id} className="work-card">

@@ -3,6 +3,11 @@
     border: 5px solid $dark-border;
     margin: 0;
     padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 .work-card {

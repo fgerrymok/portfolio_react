@@ -41,7 +41,7 @@ function Homepage() {
                     </div>
                     
                     <div className="dev-info">
-                        <h1>{homepageData.acf.name}</h1>
+                        <h1><span className="code-design">/</span>{homepageData.acf.name}</h1>
                         <h2 className="wavy-text">
                             {homepageData.acf.title.split('').map((letter, index) => {
                                 let num = index;
@@ -58,7 +58,7 @@ function Homepage() {
 
                 <div className="skills-and-about">
                     <section id="skills" className="homepage-skills">
-                        <h2>{homepageData.acf.skills_title}</h2>
+                        <h2><span className="code-design">/</span>{homepageData.acf.skills_title}</h2>
                         <ul className="homepage-toolkit">
                             {homepageData.acf.toolkit.map((tool, index) => (
                                 <li key={`${tool}-${index}`}>{tool}</li>
@@ -67,7 +67,7 @@ function Homepage() {
                     </section>
 
                     <section id="about" className="homepage-about">
-                        <h2>{homepageData.acf.about_me_title}</h2>
+                        <h2><span className="code-design">/</span>{homepageData.acf.about_me_title}</h2>
                         <p>{homepageData.acf.biography}</p>
                     </section>
                 </div>
