@@ -23,6 +23,10 @@
     border: 5px solid $accent-color-border;
 }
 
+.work-card:hover h3, .work-card:hover p, .work-card:hover li {
+    color: $dark-border;
+}
+
 @media(min-width: 50em) {
     .homepage-works {
         display: grid;
