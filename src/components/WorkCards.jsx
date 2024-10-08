@@ -26,13 +26,13 @@ function WorkCards() {
 
     return(
         <section className="homepage-works">
-            <h2 id="works" className="works-title"><span className="code-design">/</span> Works</h2>
-            {worksLoaded ? 
+            <h3 id="works" className="works-title"><span className="code-design">/</span> Works</h3>
+            {worksLoaded ?
                 worksData.map(work => (
                     <div key={work.id} className="work-card">
                         <Link to={work.slug} className="works-link">
                             <section className="works-card">
-                                <h3>{work.acf.works_title}</h3>
+                                <h4>{work.acf.works_title}</h4>
                                 <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
                                 <ul className="homepage-toolkit">
                                     {work.acf.main_toolkit.map((tool, index) => (
@@ -45,7 +45,7 @@ function WorkCards() {
                     </div>
                 ))
             : 
-                <h2>Loading...</h2>
+                <h3>Loading...</h3>
             }
         </section>
     )

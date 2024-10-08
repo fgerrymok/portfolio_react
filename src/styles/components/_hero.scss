@@ -89,7 +89,7 @@ body {
 .wavy-text span {
     display: inline-block;
     animation: animate 1.6s ease-in-out infinite;
-    animation-delay: calc(0.05s * var(--i));
+    animation-delay: calc(0.08s * var(--i));
     font-size: 1.15rem;
     text-transform: uppercase;
     padding: 0rem 0.2rem;
@@ -152,7 +152,7 @@ body {
     }
 
     .wavy-text span {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     
     .hero-section p {
