@@ -10,6 +10,11 @@
     text-transform: uppercase;
 }
 
+.works-title:hover {
+    transform: translateY(-0.5rem);
+    transition: transform 0.3s ease;
+}
+
 .work-card {
     background-color: $dark;
     border: 5px solid $dark-border;

@@ -5,6 +5,11 @@
     padding: 1rem;
 }
 
+.homepage-skills:hover, .homepage-about:hover {
+    transform: translateY(-0.5rem);
+    transition: transform 0.3s ease;
+}
+
 .homepage-skills h2, .homepage-about h2 {
     font-size: 2rem;
     text-transform: uppercase;
