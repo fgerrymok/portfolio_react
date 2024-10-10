@@ -80,7 +80,7 @@ function Homepage() {
 
                     <section id="about" className="homepage-about">
                         <h2><span className="code-design">/</span>{homepageData.acf.about_me_title}</h2>
-                        <p>{homepageData.acf.biography}</p>
+                        <p dangerouslySetInnerHTML={{ __html: homepageData.acf.biography }} />
                     </section>
                 </div>
             </div>
