@@ -36,7 +36,7 @@ function WorkDetail() {
                             <h1>{workData.acf.works_title}</h1>
                             <div className="work-detail-work-description">
                                 <h2>{workData.acf.works_description_title}</h2>
-                                <p>{workData.acf.works_short_description}</p>
+                                <p dangerouslySetInnerHTML = {{__html: workData.acf.works_short_description}} />
                             </div>
                             {/* Change the toolkit title to ACF later */}
                             <div className="work-detail-toolkit">
@@ -64,7 +64,7 @@ function WorkDetail() {
                         <section className="right-section">
                             <div className="work-detail-gallery">
                                 <h2>{workData.acf.gallery}</h2>
-                                <img src={workData.acf.works_image} alt={workData.acf.works_title} className="works-card-image"></img>
+                                <img src={workData.acf.works_image.url} alt={workData.acf.works_image.alt} className="works-card-image"></img>
                             </div>
                             <div className="links-and-return">
                                 <div className="work-detail-links">

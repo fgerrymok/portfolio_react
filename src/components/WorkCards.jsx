@@ -23,7 +23,7 @@ function WorkCards() {
         const words = text.split(/\s+/);
         return words.slice(0, wordLimit).join(' ') + (words.length > wordLimit ? '...' : '');
     }
-    console.log(worksData[0]);
+
     return(
         <section className="homepage-works">
             <h3 id="works" className="works-title"><span className="code-design">/</span> Works</h3>
@@ -39,7 +39,7 @@ function WorkCards() {
                                         <li key={`${tool}-${index}`}>{tool}</li>
                                     ))}
                                 </ul>
-                                <p>{getExcerpt(work.acf.works_short_description, 25)}</p>
+                                <p>{work.acf.work_excerpt}</p>
                             </section>
                         </Link>
                     </div>
