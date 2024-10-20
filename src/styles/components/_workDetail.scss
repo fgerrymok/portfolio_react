@@ -49,9 +49,29 @@
     height: auto;
 }
 
+.work-detail-links svg:hover, .work-detail-links svg:active, .work-detail-links svg:focus {
+    fill: $dark;
+    transition: fill 0.2s ease;
+}
+
 .return-to-home {
     margin: 0.5rem;
     padding: 0.6rem;
+}
+
+.return-to-home:hover {
+    background-color: $dark;
+    transition: background-color 0.2s ease;
+}
+
+.return-to-home:hover p{
+    color: white;
+    transition: color 0.2s ease;
+}
+
+.return-to-home:hover svg {
+    fill: white;
+    transition: fill 0.2s ease;
 }
 
 .return-to-home svg {
