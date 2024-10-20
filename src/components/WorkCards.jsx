@@ -23,7 +23,7 @@ function WorkCards() {
         const words = text.split(/\s+/);
         return words.slice(0, wordLimit).join(' ') + (words.length > wordLimit ? '...' : '');
     }
-
+    console.log(worksData[0]);
     return(
         <section className="homepage-works">
             <h3 id="works" className="works-title"><span className="code-design">/</span> Works</h3>
@@ -33,7 +33,7 @@ function WorkCards() {
                         <Link to={work.slug} className="works-link">
                             <section className="works-card">
                                 <h4>{work.acf.works_title}</h4>
-                                <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
+                                <img className="works-card-image" src={work.acf.works_image.url} alt={work.acf.works_image.alt} />
                                 <ul className="homepage-toolkit">
                                     {work.acf.main_toolkit.map((tool, index) => (
                                         <li key={`${tool}-${index}`}>{tool}</li>

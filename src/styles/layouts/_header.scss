@@ -82,9 +82,11 @@ header {
     width: 100%; 
 }
 
-.show-menu ul li a:hover {
+.show-menu ul li a:hover, .show-menu ul li a:active, .show-menu ul li a:focus {
     background-color: white;
     color: $dark;
+    transition: background-color 0.5s ease;
+    transition: color 0.5 ease;
 }
 
 @media(min-width: 37.5em) {

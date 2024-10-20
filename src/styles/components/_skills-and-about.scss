@@ -33,6 +33,12 @@
     border-color: $accent-color-border;
 }
 
+.standout {
+    font-size: 1.4rem;
+    color: $code-green;
+    padding-right: 0.5rem;
+}
+
 @media(min-width: 50em) {
     .skills-and-about {
         display: grid;

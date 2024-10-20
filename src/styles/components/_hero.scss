@@ -55,8 +55,9 @@ body {
     fill: white;
 }
 
-.socials-box svg:hover, .socials-box svg:active {
-    fill: $accent-color-border;
+.socials-box svg:hover, .socials-box svg:active, .socials-box svg:focus {
+    fill: $accent-color-border; 
+    transition: fill 0.2s ease;
 }
 
 .email-button {
