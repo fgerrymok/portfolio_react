@@ -14,10 +14,10 @@
     width: 100%;
 }
 
-.work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-toolkit, .work-detail-links, .return-to-home {
+.work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-links, .return-to-home {
     background-color: $light-card-color;
     color: black;
-    margin: 1rem 0.5rem;
+    margin: 1rem 0;
     padding: 0.75rem;
     border: 5px solid $main-card-color;
     border-radius: 1rem;
@@ -74,6 +74,38 @@
     height: auto;
 }
 
+.work-detail-toolkit {
+    border-top: 0.2rem solid white;
+    border-bottom: 0.2rem solid white;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0.5rem;
+}
+
+.work-detail-toolkit h2 {
+    padding: 0 .75rem;
+}
+
+.single-toolkit {
+    list-style-type: none;
+    padding: 0 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-toolkit li{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.2rem;
+    background: linear-gradient(#49D48D, #7DC647);
+    color: white;
+    border-radius: 1rem;
+    font-weight: 900;
+}
+
 
 @media(min-width: 37.5em) {
     .work-detail-main {
@@ -96,6 +128,10 @@
 
     .invisible-right-container {
         width: 47.5%;
+    }
+
+    .work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-links, .return-to-home {
+        margin: 1rem 0.5rem;
     }
 }
 

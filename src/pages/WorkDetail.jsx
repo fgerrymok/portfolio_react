@@ -40,8 +40,8 @@ function WorkDetail() {
                             </div>
                             {/* Change the toolkit title to ACF later */}
                             <div className="work-detail-toolkit">
-                                <h2>Toolkit</h2>
-                                <ul className="homepage-toolkit">
+                                <h2>{workData.acf.toolkit_title}</h2>
+                                <ul className="single-toolkit">
                                     {workData.acf.main_toolkit.map((tool, index) => (
                                         <li key={`${tool}-${index}`}>{tool}</li>
                                     ))}
