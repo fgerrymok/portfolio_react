@@ -11,6 +11,7 @@ function WorkDetail() {
     const [workData, setWorkData] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
     const [menuActive, setMenuActive] = useContext(Context);
+    const [currentAccordion, setCurrentAccordion] = useState(null) 
 
     useEffect(() => {
         async function getWorkDetails() {
@@ -25,6 +26,14 @@ function WorkDetail() {
         }
         getWorkDetails();
     }, [restPath])
+
+    function toggleAccordion(index) {
+        if (index === currentAccordion) {
+            setCurrentAccordion(null)
+        } else {
+            setCurrentAccordion(index);
+        }
+    }
     
     return(
         <>
@@ -49,13 +58,15 @@ function WorkDetail() {
                             </div>
                             <div className="work-detail-highlights">
                                 <h2>{workData.acf.highlights_title}</h2>
-                                {workData.acf.highlights.map((highlight) => (
-                                    <article key={highlight.highlight_title} className="single-highlight">
-                                        <h3>{highlight.highlight_title}</h3>
-                                        <p>{highlight.highlight_description}</p>
-                                        <video autoPlay loop muted className="demo-video">
-                                            <source src={highlight.demo_video} type="video/mp4"/>
-                                        </video>
+                                {workData.acf.highlights.map((highlight, index) => (
+                                    <article key={highlight.highlight_title}className="single-highlight">
+                                        <button className="accordion" onClick={() => {toggleAccordion(index)}}>{highlight.highlight_title}</button>
+                                        <div className={index === currentAccordion ? "show-accordion-content" : "hide-accordion-content"}>
+                                            <p>{highlight.highlight_description}</p>
+                                            <video autoPlay loop muted className="demo-video">
+                                                <source src={highlight.demo_video} type="video/mp4"/>
+                                            </video>
+                                        </div>
                                     </article>
                                 ))}
                             </div>

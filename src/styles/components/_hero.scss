@@ -72,6 +72,8 @@ body {
     position: absolute;
     bottom: -4rem;
     opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.2s ease, transform 0.5s ease;
 }
 
 .copied-email-msg-visible {
@@ -79,9 +81,8 @@ body {
     position: absolute;
     bottom: -4rem;
     opacity: 1;
-    transition: opacity 0.2s ease-in;
     transform: translateY(1rem);
-    transition: transform 0.5s ease;
+    transition: opacity 0.2s ease-in, transform 0.5s ease;
 }
 
 .wavy-text {
