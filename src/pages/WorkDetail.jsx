@@ -73,9 +73,12 @@ function WorkDetail() {
                         </section>
                         <div className="invisible-right-container"></div>
                         <section className="right-section">
-                            <div className="work-detail-gallery">
-                                <h2>{workData.acf.gallery}</h2>
-                                <img src={workData.acf.works_image.url} alt={workData.acf.works_image.alt} className="works-card-image"></img>
+                            <div className="work-detail-carousel">
+                                {workData.acf.works_gallery.map( (image, index) => (
+                                    <div key={index} className="single-gallery-image ">
+                                        <img src={image.link} alt={image.alt} />
+                                    </div>
+                                ))}
                             </div>
                             <div className="links-and-return">
                                 <div className="work-detail-links">

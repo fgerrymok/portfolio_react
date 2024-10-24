@@ -24,6 +24,10 @@
     margin-top: 1rem;
 }
 
+.work-card h4 {
+    font-size: 1.4rem;
+}
+
 .work-card:hover {
     background-color: $accent-color;
     border: 5px solid $accent-color-border;

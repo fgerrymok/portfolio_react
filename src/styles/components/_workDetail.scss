@@ -4,6 +4,11 @@
     min-height: 100vh;
 }
 
+.left-section h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .work-detail-main {
     flex: 1;
     margin: 1rem;
@@ -14,7 +19,7 @@
     width: 100%;
 }
 
-.work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-links, .return-to-home {
+.work-detail-work-description, .work-detail-highlights, .work-detail-links, .return-to-home {
     background-color: $light-card-color;
     color: black;
     margin: 1rem 0;
@@ -41,6 +46,7 @@
     padding: 0 0.75rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .single-toolkit li{
@@ -169,6 +175,24 @@
     margin-right: 0.5rem;
 }
 
+// Carousel
+
+.work-detail-carousel {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.single-gallery-image:first-child {
+    min-width: 25rem;
+    margin: 0.5rem;
+}
+
+.single-gallery-image {
+    min-width: 20rem;
+}
+
+
 // Under Construction --------------------------------------------------------------------
 
 .under-construction{
@@ -198,6 +222,11 @@
         width: 50%;
     }
 
+    .left-section h1 {
+        text-align: start;
+        margin-left: 2rem;
+    }
+
     .right-section {
         width: 47.5%;
         position: fixed;
@@ -210,7 +239,7 @@
         width: 47.5%;
     }
 
-    .work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-links, .return-to-home {
+    .work-detail-work-description, .work-detail-highlights, .work-detail-links, .return-to-home {
         margin: 1rem 0.5rem;
     }
 }

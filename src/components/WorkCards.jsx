@@ -33,7 +33,10 @@ function WorkCards() {
                         <Link to={work.slug} className="works-link">
                             <section className="works-card">
                                 <h4>{work.acf.works_title}</h4>
-                                <img className="works-card-image" src={work.acf.works_image.url} alt={work.acf.works_image.alt} />
+                                {work.acf.works_gallery ?                                 
+                                    <img className="works-card-image" src={work.acf.works_gallery[0].link} alt={work.acf.works_gallery.alt} />
+                                : null
+                                }
                                 <ul className="homepage-toolkit">
                                     {work.acf.main_toolkit.map((tool, index) => (
                                         <li key={`${tool}-${index}`}>{tool}</li>
