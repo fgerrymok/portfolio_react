@@ -4,6 +4,11 @@
     min-height: 100vh;
 }
 
+.left-section h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .work-detail-main {
     flex: 1;
     margin: 1rem;
@@ -14,37 +19,249 @@
     width: 100%;
 }
 
-.work-detail-work-description, .work-detail-highlights, .work-detail-gallery, .work-detail-toolkit, .work-detail-links {
+.work-detail-work-description, .work-detail-highlights, .work-detail-links, .return-to-home {
     background-color: $light-card-color;
     color: black;
-    margin: 1rem 0.5rem;
-    padding: 1rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
     border: 5px solid $main-card-color;
     border-radius: 1rem;
 }
 
-.link-icon {
+// Toolkit --------------------------------------------------------------------
+
+.work-detail-toolkit {
+    border-top: 0.2rem solid white;
+    border-bottom: 0.2rem solid white;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0.5rem;
+}
+
+.work-detail-toolkit h2 {
+    padding: 0 .75rem;
+}
+
+.single-toolkit {
+    list-style-type: none;
+    padding: 0 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.single-toolkit li{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.2rem;
+    background: linear-gradient(#49D48D, #7DC647);
+    color: white;
+    border-radius: 1rem;
+    font-weight: 900;
+}
+
+// Highlights --------------------------------------------------------------------
+
+.work-detail-highlights {
+    padding: 0;
+}
+
+.work-detail-highlights h2 {
+    padding: 0.75rem;
+}
+
+.single-highlight {
+    padding: 1rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.single-highlight:last-child {
+    border-bottom: none;
+}
+
+.single-highlight:nth-child(2) {
+    border-top: 2px solid white !important; 
+}
+
+.accordion {
+    width: 100%;
+    text-align: left;
+    font-size: 1.4rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    transform: translateX(0);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.accordion:hover {
+    color: $dark-border;
+    transform: translateX(1rem);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.hide-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.show-accordion-content {
+    max-height: 48rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+// Links & Return --------------------------------------------------------------------
+
+.links-and-return {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.work-detail-links, .return-to-home a {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.work-detail-links {
+    height: 5rem;
+    margin: 0.5rem;
+}
+
+.work-detail-links svg {
+    margin: .75rem;
+    width: 2.2rem;
+    height: auto;
+}
+
+.work-detail-links svg:hover, .work-detail-links svg:active, .work-detail-links svg:focus {
+    fill: $dark;
+    transition: fill 0.2s ease;
+}
+
+.return-to-home {
+    margin: 0.5rem;
+    padding: 0.6rem;
+}
+
+.return-to-home:hover {
+    background-color: $dark;
+    transition: background-color 0.2s ease;
+}
+
+.return-to-home:hover p{
+    color: white;
+    transition: color 0.2s ease;
+}
+
+.return-to-home:hover svg {
+    fill: white;
+    transition: fill 0.2s ease;
+}
+
+.return-to-home svg {
+    margin-right: 0.5rem;
+}
+
+// Carousel
+
+.work-detail-carousel {
+    display: flex;
+    align-items: center;
     margin: 1rem;
 }
 
+.single-gallery-image:first-child {
+    min-width: 25rem;
+    margin: 0.5rem;
+}
+
+.single-gallery-image {
+    min-width: 20rem;
+}
+
+
+// Under Construction --------------------------------------------------------------------
+
+.under-construction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.under-construction-text {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.under-construction-svg {
+    width: 12rem;
+    height: auto;
+}
 
 @media(min-width: 37.5em) {
     .work-detail-main {
         display: flex;
         justify-content: space-around;
+        margin-top: 8rem;
     }
     
     .left-section {
         width: 50%;
     }
 
+    .left-section h1 {
+        text-align: start;
+        margin-left: 2rem;
+    }
+
     .right-section {
-        width: 50%;
+        width: 47.5%;
+        position: fixed;
+        z-index: 1;
+        right: 1rem;
+        top: 6rem;
+    }
+
+    .invisible-right-container {
+        width: 47.5%;
+    }
+
+    .work-detail-work-description, .work-detail-highlights, .work-detail-links, .return-to-home {
+        margin: 1rem 0.5rem;
     }
 }
 
-@media(min-width: 80em) {
+@media(min-width: 65.625rem) {
+    .left-section {
+        width: 60%;
+    }
+
+    .right-section, .invisible-right-container {
+        width: 37.5%;
+    }
+}
+
+@media(min-width: 82em) {
     .work-detail-main {
         margin: 1rem auto;
+        margin-top: 8rem;
+    }
+
+    .right-section, .invisible-right-container {
+        width: 30.5rem;
+        right: calc((100vw - 80rem) / 2);
     }
 }

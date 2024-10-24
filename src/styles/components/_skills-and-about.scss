@@ -1,8 +1,18 @@
 .homepage-skills, .homepage-about  {
-    background-color: $home-card-background-color;
-    border: 5px solid $home-card-border-color;
+    background-color: $dark;
+    border: 5px solid $dark-border;
     margin-top: 1rem;
     padding: 1rem;
+}
+
+.homepage-skills:hover, .homepage-about:hover {
+    transform: translateY(-0.5rem);
+    transition: transform 0.3s ease;
+}
+
+.homepage-skills h2, .homepage-about h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .homepage-toolkit {
@@ -17,6 +27,20 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 0.2rem 0.4rem;
+}
+
+.homepage-toolkit li:hover {
+    border-color: $accent-color-border;
+}
+
+.homepage-about p {
+    line-height: 1.4rem;
+}
+
+.standout {
+    font-size: 1.4rem;
+    color: $code-green;
+    padding-right: 0.5rem;
 }
 
 @media(min-width: 50em) {

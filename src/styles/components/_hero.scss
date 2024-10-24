@@ -8,22 +8,112 @@ body {
 .main {
     margin: 1rem;
     max-width: 80rem;
+    transform: translateX(0%);
+    transition: transform 0.5s ease;
+    flex: 1;
+}
+
+.main-pushed-left {
+    margin: 1rem;
+    max-width: 80rem;
+    transform: translateX(-71%);
+    transition: transform 0.5s ease;
 }
 
 .hero-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1rem auto;
+    margin: 5rem auto;
     max-width: 35rem;
 }
 
+.hero-section h1 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
 .socials-box {
-    width: 11rem;
-    height: 3rem;
-    border: 2px solid $primary-font-color;
+    width: 13rem;
+    height: 5rem;
+    border: 5px solid $dark-border;
     border-radius: 1rem;
+    margin: 1rem;
     order: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.socials-box svg {
+    width: 3rem;
+    height: auto;
+}
+
+.socials-box svg {
+    fill: white;
+}
+
+.socials-box svg:hover, .socials-box svg:active, .socials-box svg:focus {
+    fill: $code-green; 
+    transition: fill 0.2s ease;
+}
+
+.email-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.copied-email-msg-invisible {
+    text-align: center;
+    position: absolute;
+    bottom: -4rem;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.2s ease, transform 0.5s ease;
+}
+
+.copied-email-msg-visible {
+    text-align: center;
+    position: absolute;
+    bottom: -4rem;
+    opacity: 1;
+    transform: translateY(1rem);
+    transition: opacity 0.2s ease-in, transform 0.5s ease;
+}
+
+.wavy-text {
+    -webkit-box-reflect: below -0.75rem linear-gradient(transparent, #00000033);
+}
+
+.wavy-text span {
+    display: inline-block;
+    animation: animate 1.6s ease-in-out infinite;
+    animation-delay: calc(0.08s * var(--i));
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    padding: 0rem 0.2rem;
+}
+
+.wavy-text span:nth-child(1) {
+    padding-left: 0;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    20% {
+        transform: translateY(-1.25rem);
+    }
+
+    40%, 100% {
+        transform: translateY(0rem);
+    }
 }
 
 @media(min-width: 26.25em) {
@@ -34,9 +124,11 @@ body {
 
     .socials-box {
         order: 0;
-        min-width: 3rem;
-        width: 3rem;
-        height: 11rem;
+        min-width: 4rem;
+        min-width: 5rem;
+        height: 13rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     .dev-info {
@@ -44,8 +136,45 @@ body {
     }
 }
 
+@media(min-width: 37.5em) {
+    .main {
+        margin-top: 6.6rem;
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+
+    .main-pushed-left {
+        margin-top: 6.6rem;
+        transform: translateX(-40%);
+        transition: transform 0.5s ease;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .wavy-text span {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
+
 @media(min-width: 82em) {
     .main {
         margin: 1rem auto;
+        margin-top: 6.6rem;
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+
+    .main-pushed-left {
+        margin: 1rem auto;
+        margin-top: 6.6rem;
+        transform: translateX(-40%);
+        transition: transform 0.5s ease;
     }
 }

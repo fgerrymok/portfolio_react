@@ -26,26 +26,29 @@ function WorkCards() {
 
     return(
         <section className="homepage-works">
-            <h2 id="works" className="works-title">Works</h2>
-            {worksLoaded ? 
+            <h3 id="works" className="works-title"><span className="code-design">/</span> Works</h3>
+            {worksLoaded ?
                 worksData.map(work => (
                     <div key={work.id} className="work-card">
                         <Link to={work.slug} className="works-link">
                             <section className="works-card">
-                                <h3>{work.acf.works_title}</h3>
-                                <img className="works-card-image" src={work.acf.works_image} alt={work.acf.works_title} />
+                                <h4>{work.acf.works_title}</h4>
+                                {work.acf.works_gallery ?                                 
+                                    <img className="works-card-image" src={work.acf.works_gallery[0].link} alt={work.acf.works_gallery.alt} />
+                                : null
+                                }
                                 <ul className="homepage-toolkit">
                                     {work.acf.main_toolkit.map((tool, index) => (
                                         <li key={`${tool}-${index}`}>{tool}</li>
                                     ))}
                                 </ul>
-                                <p>{getExcerpt(work.acf.works_short_description, 25)}</p>
+                                <p>{work.acf.work_excerpt}</p>
                             </section>
                         </Link>
                     </div>
                 ))
             : 
-                <h2>Loading...</h2>
+                <h3>Loading...</h3>
             }
         </section>
     )

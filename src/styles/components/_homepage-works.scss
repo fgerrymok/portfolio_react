@@ -1,16 +1,41 @@
 .works-title {
-    background-color: $home-card-background-color;
-    border: 5px solid $home-card-border-color;
+    background-color: $dark;
+    border: 5px solid $dark-border;
     margin: 0;
     padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.works-title:hover {
+    transform: translateY(-0.5rem);
+    transition: transform 0.3s ease;
 }
 
 .work-card {
-    background-color: $home-card-background-color;
-    border: 5px solid $home-card-border-color;
+    background-color: $dark;
+    border: 5px solid $dark-border;
+    transition: background-color 0.3s ease, border 0.3s ease;
     border-top: none;
     padding: 1rem;
     margin-top: 1rem;
+}
+
+.work-card h4 {
+    font-size: 1.4rem;
+}
+
+.work-card:hover {
+    background-color: $accent-color;
+    border: 5px solid $accent-color-border;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.work-card:hover h4, .work-card:hover p, .work-card:hover li {
+    color: $dark-border;
 }
 
 @media(min-width: 50em) {
@@ -22,7 +47,7 @@
 
     .work-card {
         margin: 0;
-        border: 5px solid $home-card-border-color;
+        border: 5px solid $dark-border;
     }
 
     .works-title {

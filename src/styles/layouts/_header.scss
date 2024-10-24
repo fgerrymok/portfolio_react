@@ -1,15 +1,108 @@
 header {
-    background-color: $main-card-color;
+    background-color: $dark;
     padding: 1rem;
+    height: 6rem;
+    position: relative;
 }
 
-header ul {
+.site-logo {
+    width: 5rem;
+}
+
+.menu-button {
+    width: 4rem;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    z-index: 10000;
+}
+
+
+.menu-button-fixed {
+    position: fixed;
+    width: 4rem;
+    background-color: transparent;
+    border: none;
+    right: 1rem;
+    top: 1.4rem;
+    z-index: 10000;
+}
+
+.menu-button svg path, .menu-button-fixed svg path {
+    fill: white;
+}
+
+.show-menu ul {
     list-style-type: none;
-    display: flex;
     padding: 0;
+    margin: 0;
+    background-color: $main-card-color;
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
 }
 
-header ul li {
+.hide-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: $main-card-color;
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(100%);
+    transition: transform 0.5s ease;
+}
+
+.show-menu ul li, .hide-menu ul li {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.show-menu ul li a, .hide-menu ul li a {
     padding: 1rem;
-    font-size: 1.3rem;
+    display: block;
+    width: 100%; 
+}
+
+.show-menu ul li a:hover, .show-menu ul li a:active, .show-menu ul li a:focus {
+    background-color: white;
+    color: $dark;
+    transition: background-color 0.5s ease;
+    transition: color 0.5 ease;
+}
+
+@media(min-width: 37.5em) {
+    header {
+        position: fixed;
+        top: 0rem;
+        right: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .show-menu ul {
+        width: 40%;
+    }
+
+    .hide-menu ul {
+        width: 40%;
+    }
 }
