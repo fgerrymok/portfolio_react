@@ -45,7 +45,7 @@ function WorkDetail() {
                         <section className="left-section">
                             <div className="work-detail-carousel">
                                 {workData.acf.works_gallery.map( (image, index) => (
-                                    <div key={index} className="single-gallery-image ">
+                                    <div key={index} className="single-gallery-image">
                                         <img src={image.link} alt={image.alt} />
                                     </div>
                                 ))}
