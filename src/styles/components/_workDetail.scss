@@ -4,15 +4,19 @@
     min-height: 100vh;
 }
 
+.work-detail-main {
+    flex: 1;
+    max-width: 80rem;
+}
+
+.right-section {
+    margin: 1rem;
+}
+
 .left-section h1 {
     text-transform: uppercase;
     text-align: center;
-}
-
-.work-detail-main {
-    flex: 1;
-    margin: 1rem;
-    max-width: 80rem;
+    margin: 3rem;
 }
 
 .demo-video {
@@ -24,7 +28,7 @@
     color: black;
     margin: 1rem 0;
     padding: 0.75rem;
-    border: 5px solid $main-card-color;
+    border: 5px solid $dark-border;
     border-radius: 1rem;
 }
 
@@ -122,7 +126,8 @@
 .links-and-return {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin: 1rem;
 }
 
 .work-detail-links, .return-to-home a {
@@ -175,23 +180,16 @@
     margin-right: 0.5rem;
 }
 
-// Carousel
+// Carousel --------------------------------------------------------------------
 
 .work-detail-carousel {
     display: flex;
-    align-items: center;
-    margin: 1rem;
+    overflow: hidden;
 }
 
 .single-gallery-image:first-child {
-    min-width: 25rem;
-    margin: 0.5rem;
+    min-width: 100%;
 }
-
-.single-gallery-image {
-    min-width: 20rem;
-}
-
 
 // Under Construction --------------------------------------------------------------------
 
@@ -211,47 +209,115 @@
     height: auto;
 }
 
+// Media Queries --------------------------------------------------------------------
+
 @media(min-width: 37.5em) {
     .work-detail-main {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 8rem;
-    }
-    
-    .left-section {
-        width: 50%;
-    }
-
-    .left-section h1 {
-        text-align: start;
-        margin-left: 2rem;
-    }
-
-    .right-section {
-        width: 47.5%;
-        position: fixed;
-        z-index: 1;
-        right: 1rem;
-        top: 6rem;
-    }
-
-    .invisible-right-container {
-        width: 47.5%;
-    }
-
-    .work-detail-work-description, .work-detail-highlights, .work-detail-links, .return-to-home {
-        margin: 1rem 0.5rem;
+        margin-top: 6rem;
     }
 }
 
 @media(min-width: 65.625rem) {
-    .left-section {
-        width: 60%;
+
+    .work-detail-main {
+        display: flex;
+        justify-content: space-around;
     }
 
-    .right-section, .invisible-right-container {
-        width: 37.5%;
+    .invisible-left-container {
+        width: 47.5%;
     }
+
+    .divider {
+        border-right: 3px solid #fff;
+    }
+
+    .right-section {
+        width: 47.5%;
+    }
+
+    .left-section{
+        width: 45.5%;
+        position: fixed;
+        top: 7rem;
+        left: 1rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 75%;
+    }
+
+    .work-title-section {
+        margin: 4rem 2rem;
+        position: relative;
+    }
+
+    .work-title-section h1 {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5rem 3rem;
+    }
+
+    .styling-line-horizontal-left {
+        width: 10rem;
+        position: absolute;
+    }
+
+    .styling-line-vertical-left {
+        width: 8rem;
+        position: absolute;
+        transform: rotate(90deg);
+        left: -3rem;
+        top: 3rem;
+    }
+
+    .styling-line-horizontal-right {
+        width: 10rem;
+        position: absolute;
+        right: 0;
+    }
+
+    .styling-line-vertical-right {
+        width: 8rem;
+        position: absolute;
+        transform: rotate(90deg);
+        right: -3rem;
+        bottom: 2rem;
+    }
+    
+    // .right-section {
+    //     width: 50%;
+    // }
+    
+    // .right-section h1 {
+    //     text-align: start;
+    //     margin-left: 2rem;
+    // }
+    
+    // .left-section {
+    //     width: 47.5%;
+    //     position: fixed;
+    //     z-index: 1;
+    //     left: 1rem;
+    //     top: 6rem;
+    // }
+
+    // .invisible-left-container {
+    //     width: 47.5%;
+    // }
+
+    // .work-detail-work-description, .work-detail-highlights, .work-detail-links, .return-to-home {
+    //     margin: 1rem 0.5rem;
+    // }
+    
+    // .right-section {
+    //     width: 60%;
+    // }
+    
+    // .left-section, .invisible-left-container {
+    //     width: 37.5%;
+    // }
 }
 
 @media(min-width: 82em) {
@@ -260,8 +326,8 @@
         margin-top: 8rem;
     }
 
-    .right-section, .invisible-right-container {
-        width: 30.5rem;
-        right: calc((100vw - 80rem) / 2);
+    .left-section, .invisible-left-container {
+        width: 32rem;
+        left: calc((100vw - 80rem) / 2);
     }
 }
