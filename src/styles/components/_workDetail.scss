@@ -12,19 +12,21 @@
 .work-title-section {
     margin: 8rem 1rem;
     position: relative;
-}
-
-.work-title-section h1 {
     flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.work-detail-main p {
+    line-height: 1.4rem;
 }
 
 .styling-line-horizontal-left {
     width: 10rem;
     position: absolute;
     top: -4rem;
+    left: 0;
 }
 
 .styling-line-vertical-left {
@@ -54,10 +56,11 @@
     margin: 1rem;
 }
 
-.left-section h1 {
+.work-title-section h1 {
     text-transform: uppercase;
     text-align: center;
-    margin: 3rem;
+    margin: 2rem;
+    max-width: 22rem;
 }
 
 .demo-video {
@@ -300,10 +303,8 @@
         left: 1rem;
         display: flex;
         flex-direction: column;
-        min-height: 75%;
+        min-height: 85%;
     }
-
-    // Carousel
 
     .single-gallery-image:first-child {
         border: 3px solid #fff;
@@ -315,7 +316,7 @@
     }
 
     .work-title-section {
-        margin: 5rem 2rem;
+        margin: 3rem 2rem;
         position: relative;
     }
     

@@ -38,7 +38,7 @@ function WorkDetail() {
     return(
         <>
             {isLoaded ? (
-                workData.id === 35 || workData.id === 38 || workData.id === 40 ? 
+                workData.id === 35 || workData.id === 38 || workData.id === 40 || workData.id === 42 ? 
                     <div className="work-detail-main" onClick={() => {menuActive ? toggleNav(menuActive, setMenuActive) : null}}>
                     
                         <div className="invisible-left-container"></div>
