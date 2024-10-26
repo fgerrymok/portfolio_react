@@ -77,7 +77,7 @@ function WorkDetail() {
                         <div className="divider"></div>
 
                         <section className="right-section">
-                            <div className="work-detail-work-description">
+                            <div className="work-detail-work-description" id="skip-to-content">
                                 <h2>{workData.acf.works_description_title}</h2>
                                 <p dangerouslySetInnerHTML = {{__html: workData.acf.works_short_description}} />
                             </div>

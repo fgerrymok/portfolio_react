@@ -16,6 +16,7 @@ function App() {
     <BrowserRouter>
     <ScrollToTop />
     <Context.Provider value={[menuActive, setMenuActive]}>
+      <a href="#skip-to-content" className="screen-reader-text">Skip To Content</a>
       <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />

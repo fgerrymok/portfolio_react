@@ -53,7 +53,7 @@ function Homepage() {
                             Email Copied To Clipboard!
                         </div>
                     </div>
-                    <div className="dev-info">
+                    <div className="dev-info" id="skip-to-content">
                         <h1><span className="code-design">/</span>{homepageData.acf.name}</h1>
                         <h2 className="wavy-text">
                             {homepageData.acf.title.split('').map((letter, index) => {
