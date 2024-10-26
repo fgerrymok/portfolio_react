@@ -3,6 +3,7 @@ import { restBase, toggleNav } from "../utilities/Utilities";
 import WorkCards from "../components/WorkCards";
 import { Link } from "react-router-dom";
 import { Context } from "../App";
+import Footer from "../components/Footer";
 
 function Homepage() {
     const homepagePath = restBase + "pages/9";
@@ -89,6 +90,7 @@ function Homepage() {
                 <h2>Loading...</h2>
             </div>
         }
+        <Footer />
         </>
     )
 }
