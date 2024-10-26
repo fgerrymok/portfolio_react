@@ -3,6 +3,9 @@ import { useState, useEffect, useContext } from 'react';
 import { restBase, toggleNav } from "../utilities/Utilities";
 import { Link } from "react-router-dom";
 import { Context } from "../App";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 function WorkDetail() {
     // grab the param and use it to make an API call
@@ -11,7 +14,17 @@ function WorkDetail() {
     const [workData, setWorkData] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
     const [menuActive, setMenuActive] = useContext(Context);
-    const [currentAccordion, setCurrentAccordion] = useState(null) 
+    const [currentAccordion, setCurrentAccordion] = useState(null);
+    const carouselSettings = {
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    };
 
     useEffect(() => {
         async function getWorkDetails() {
@@ -42,13 +55,20 @@ function WorkDetail() {
                     <div className="work-detail-main" onClick={() => {menuActive ? toggleNav(menuActive, setMenuActive) : null}}>
                         <div className="invisible-left-container"></div>
                         <section className="left-section">
-                            <div className="work-detail-carousel">
+                            <Slider {...carouselSettings}>
                                 {workData.acf.works_gallery.map( (image, index) => (
                                     <div key={index} className="single-gallery-image">
                                         <img src={image.link} alt={image.alt} />
                                     </div>
                                 ))}
-                            </div>
+                            </Slider>
+                            {/* <div className="work-detail-carousel">
+                                {workData.acf.works_gallery.map( (image, index) => (
+                                    <div key={index} className="single-gallery-image">
+                                        <img src={image.link} alt={image.alt} />
+                                    </div>
+                                ))}
+                            </div> */}
                             <div className="work-title-section">
                                 <hr className="styling-line-vertical-left"/>
                                 <hr className="styling-line-horizontal-left"/>
@@ -97,7 +117,7 @@ function WorkDetail() {
                                         <button className="accordion" onClick={() => {toggleAccordion(index)}}>{highlight.highlight_title}</button>
                                         <div className={index === currentAccordion ? "show-accordion-content" : "hide-accordion-content"}>
                                             <p>{highlight.highlight_description}</p>
-                                            <video autoPlay loop muted className="demo-video">
+                                            <video autoPlay playsInline loop muted className="demo-video">
                                                 <source src={highlight.demo_video} type="video/mp4"/>
                                             </video>
                                         </div>

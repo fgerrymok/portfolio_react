@@ -28,3 +28,18 @@
 .works-card-image {
   width: 100%;
 }
+
+.blank-page {
+  flex: 1;
+}
+
+.show-loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hide-loading-animation {
+  display: none;
+}

@@ -306,15 +306,11 @@
         min-height: 85%;
     }
 
-    .single-gallery-image:first-child {
-        border: 3px solid #fff;
-        border-radius: 1rem;
+    .single-gallery-image:first-child img {
+        // border: 3px solid #fff;
+        // border-radius: 1rem;
     }
     
-    .single-gallery-image img {
-        border-radius: 1rem;
-    }
-
     .work-title-section {
         margin: 3rem 2rem;
         position: relative;
